@@ -6,23 +6,29 @@
 <title>Oila va xotin-qizlar qo'mitasi</title>
 <style>
   :root{
-    --bg1:#0a99b8; --bg2:#06657c; --card:#ffffff; --ink:#0f2a33; --muted:#5d7780;
-    --accent:#0a99b8; --accent-soft:#e3f4f8; --green:#22b33a;
+    --light:#3874c7; --mid:#26538e; --dark:#173861; --card:#ffffff; --ink:#132338; --muted:#5f6f85;
+    --accent:#26538e; --accent-soft:#e6eef8;
   }
   *{box-sizing:border-box}
-  html{background:var(--bg2)}
+  html{background:var(--mid)}
   body{margin:0;min-height:100vh;color:var(--ink);
-    background:linear-gradient(170deg,var(--bg1) 0%,var(--bg2) 100%) fixed;
+    background:
+      radial-gradient(ellipse 70% 55% at 0% 0%,var(--light) 0%,transparent 100%),
+      radial-gradient(ellipse 70% 55% at 100% 100%,#356ebd 0%,transparent 100%),
+      radial-gradient(ellipse 60% 50% at 100% 0%,var(--dark) 0%,transparent 100%),
+      radial-gradient(ellipse 60% 50% at 0% 100%,var(--dark) 0%,transparent 100%),
+      var(--mid);
+    background-attachment:fixed;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
     display:flex;justify-content:center;padding:40px 16px 48px}
   .page{width:100%;max-width:420px;text-align:center}
   .logo{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 14px}
-  .sub{font-size:14px;color:#d6f1f7;margin:0 0 26px}
+  .sub{font-size:14px;color:#d9e6f7;margin:0 0 26px}
   .links{display:flex;flex-direction:column;gap:12px}
   a.btn{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
     background:var(--card);border-radius:16px;padding:12px 16px;font-weight:600;font-size:15px;
-    box-shadow:0 6px 18px rgba(0,40,55,.18);transition:transform .15s,box-shadow .15s}
-  a.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,40,55,.25)}
+    box-shadow:0 6px 18px rgba(8,25,50,.18);transition:transform .15s,box-shadow .15s}
+  a.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(8,25,50,.25)}
   .ic{width:40px;height:40px;border-radius:12px;flex:none;display:grid;place-items:center;
     background:var(--accent-soft);color:var(--accent)}
   .t{flex:1;text-align:left}
